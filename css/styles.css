@@ -1,0 +1,26 @@
+* {
+	box-sizing: border-box;
+}
+
+img {
+	display: block;
+}
+
+.container {
+	width: 1440px;
+	height: 696px;
+	padding: 24px 156px;
+}
+
+.gallery {
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	column-gap: 24px;
+	row-gap: 24px;
+	justify-content: center;
+}
+.gallery li img {
+	object-fit: cover;
+}
