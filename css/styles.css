@@ -6,21 +6,37 @@ img {
 	display: block;
 }
 
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	margin: 0;
+}
+
 .container {
+	display: block;
 	width: 1440px;
 	height: 696px;
-	padding: 24px 156px;
+	padding: 24px;
 }
 
 .gallery {
 	list-style-type: none;
 	display: flex;
-	flex-direction: row;
 	flex-wrap: wrap;
-	column-gap: 24px;
-	row-gap: 24px;
+	gap: 24px;
 	justify-content: center;
+	padding: 0;
+	margin: 0;
 }
-.gallery li img {
+.gallery-image {
+	width: 360px;
+	height: 200px;
 	object-fit: cover;
+}
+
+.gallery-image:hover {
+	transform: scale(1.025);
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
