@@ -97,20 +97,19 @@ galleryList.addEventListener('click', event => {
   `,
 		{
 			onShow: () => {
-				document.addEventListener('onkeydown', onKey);
+				document.addEventListener('keydown', onKey);
 			},
 			onClose: () => {
-				document.removeEventListener('onkeydown', onKey);
+				document.removeEventListener('keydown', onKey);
 			},
 		}
 	);
 	clickedImage.show();
 
-	document.addEventListener('keydown', onKey);
 	function onKey(params) {
 		if (params.code === 'Escape') {
 			clickedImage.close();
-			document.removeEventListener('onkeydown', onKey);
+			document.removeEventListener('keydown', onKey);
 		}
 	}
 });
